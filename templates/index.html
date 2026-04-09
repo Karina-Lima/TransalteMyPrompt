@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranslateMyPrompt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+<body>
+
+    <header class="topbar">
+
+        <div class="logo-area">
+            <a href="index.html"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo"></a>
+            <p class="subtitle">Aprimorador de prompts com IA</p>
+        </div>
+
+        <div class="top-actions">
+            <a href="#">Documentação</a>
+            <a href="#" class="login-btn">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+
+    </header>
+
+
+    <main class="translator-container">
+
+        <section class="translator-box">
+
+            <!-- LEFT PANEL -->
+            <div class="panel left-panel">
+
+                <div class="panel-header">
+                    <h3>Original</h3>
+                    <span class="panel-tag">Input</span>
+                </div>
+
+                <textarea id="prompt-input" placeholder="Digite aqui a sua ideia..."></textarea>
+
+                <button id="optimize-btn" class="optimize-btn full-width">
+                    Aprimorar
+                </button>
+
+            </div>
+
+
+            <!-- CENTER ICON -->
+            <div class="swap-btn">
+                ✨
+            </div>
+
+
+            <!-- RIGHT PANEL -->
+            <div class="panel right-panel">
+
+                <div class="panel-header">
+                    <h3>Aprimorado</h3>
+                    <span class="panel-tag">AI Enhanced (gemini-2.5-flash)</span>
+                </div>
+
+                <!-- BOTÃO COPIAR -->
+                <div class="output-wrapper">
+
+                    <button id="copy-btn" class="copy-btn" title="Copiar">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+
+                    <div class="translation-output" id="optimized-output">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="score-section">
+
+            <div class="score-card">
+
+                <div class="score-header">
+                    <h3>Prompt Score</h3>
+                    <span class="score-number" id="score-number">0/100</span>
+                </div>
+
+                <div class="score-bar">
+                    <div class="score-fill" id="score-fill"></div>
+                </div>
+
+                <div class="feedback-box">
+                    <h4>Pontos Fortes</h4>
+                    <ul id="strengths-list">
+                        <li>Seu prompt será analisado quanto à clareza, objetivo e estrutura</li>
+                        <li>Boas práticas como contexto, instruções e formato de saída serão avaliadas</li>
+                        <li>Prompts bem definidos tendem a gerar respostas mais precisas e úteis</li>
+                    </ul>
+                </div>
+
+                <div class="feedback-box">
+                    <h4>Melhorias</h4>
+                    <ul id="improvements-list">
+                        <li>Sugestões de melhoria aparecerão aqui após a análise</li>
+                        <li>Você verá como tornar seu prompt mais específico e eficiente</li>
+                        <li>Dicas incluem adicionar contexto, restrições e formato esperado</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+<footer class="footer">
+    <p>© Karina Antunes de Lima</p>
+</footer>
+
+
+</html>
