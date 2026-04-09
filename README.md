@@ -54,7 +54,7 @@ O projeto segue uma arquitetura simples de backend + frontend, com integração 
 
 `pip install -r requirements.txt `
 
-#### **3. Alter o arquivo .env na raiz com sua chave Gemini:**
+#### **3. Altere o arquivo .env na raiz com sua chave Gemini:**
 
 Gere uma chave na plataforma do Google AI ou utilize uma já existente.
 
