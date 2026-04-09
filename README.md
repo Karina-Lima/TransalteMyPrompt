@@ -20,7 +20,7 @@ Aplicação web para análise, pontuação e otimização de prompts utilizando 
 - Feedback estruturado
 - Botão de "copy"
   
-`demo.mp4`
+![Demo](demo.gif)
 
 ---
 
